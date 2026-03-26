@@ -1,17 +1,26 @@
 import React, {Component} from "react";
-import {View, Text, Image, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-web";
+import {View, Text, Image, StyleSheet, TextInput} from "react-native";
 
 class Aula03 extends Component {
-    render(){
+    render() {
         return(
             <View style={ styles.container}>
-                <TextInput
-                    style={ styles.input }
-                />
-                <TextInput
-                    style={ styles.input }
-                />
+                <View style={ styles.conteudo}>
+                    <Image
+                        style={ styles.logo }
+                        source={require('../images/spam_cooking-i1pyKBJ9BRgjP1OS.gif')}
+                    />
+
+                    <Text style={styles.label}>Nome:</Text>
+
+                    <TextInput 
+                        style={ styles.input }
+                    />
+                    <Text style={styles.label}>Senha:</Text>
+                    <TextInput 
+                        style={ styles.input }
+                    />
+                </View>
             </View>
         );
     }
@@ -20,11 +29,30 @@ class Aula03 extends Component {
 export default Aula03;
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'black'
+    },
+
+    conteudo: {
+        borderColor: 'red',
+        borderWidth: 1,
+        width: 300,
+        height: 300,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    logo: {
+        width: 130,
+        height: 100,
+    },
+
+    label: {
+        
     },
 
     input: {
@@ -36,4 +64,5 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 5
     }
+
 })
