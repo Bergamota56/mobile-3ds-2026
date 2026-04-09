@@ -20,6 +20,9 @@ class Aula03 extends Component {
                     <TextInput 
                         style={ styles.input }
                     />
+                    <TextInput style={ styles.botao }>
+                        <Text style={styles.textobotao}>Entrar</Text>
+                    </TextInput>
                 </View>
             </View>
         );
