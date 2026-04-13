@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {View, Text, Image, StyleSheet, TextInput} from "react-native";
+import { Button } from "react-native-web";
 
 class Aula03 extends Component {
     render() {
@@ -12,7 +13,6 @@ class Aula03 extends Component {
                     />
 
                     <Text style={styles.label}>Nome:</Text>
-
                     <TextInput 
                         style={ styles.input }
                     />
@@ -20,9 +20,13 @@ class Aula03 extends Component {
                     <TextInput 
                         style={ styles.input }
                     />
-                    <TextInput style={ styles.botao }>
-                        <Text style={styles.textobotao}>Entrar</Text>
-                    </TextInput>
+
+                    <Button 
+                        style={ styles.botao }
+                        title="Entrar"
+                        color="green"
+                    />
+
                 </View>
             </View>
         );
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     },
 
     label: {
-        
+        color: 'white'
     },
 
     input: {
@@ -65,6 +69,13 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         backgroundColor: 'white',
+        borderRadius: 5
+    },
+
+    botao: {
+        backgroundColor: 'green',
+        padding: 20,
+        color: 'black',
         borderRadius: 5
     }
 
